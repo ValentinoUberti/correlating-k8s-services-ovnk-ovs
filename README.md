@@ -114,15 +114,7 @@ Example (hard to read) output:
   table=8 (lr_in_dnat         ), priority=120  , match=(ct.new && !ct.rel && ip4 && ip4.dst == 172.30.80.46 && tcp && tcp.dst == 9080), action=(flags.force_snat_for_lb = 1; ct_lb_mark(backends=10.129.0.59:9080; force_snat);)
 ```
 
-Identify the Datapath  
-Find the datapath tied to the Kubernetes network:  
-bash
-
-ovn-sbctl list Datapath\_Binding
-
-Look for external\_ids like ovn-k8s-mp0.
-
-Step 3: Correlate to OVS OpenFlow Rules  
+### Step 5: Correlate to OVS OpenFlow Rules  
 Dump OpenFlow Rules
 
 On one OpenShift node running OVS (e.g., br-int), filter for the VIP:
