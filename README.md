@@ -1,6 +1,6 @@
 # Correlating OVN Load Balancer ID to OVS OpenFlow Rules in OVN-Kubernetes
 
-This guide explains how to trace an OVN load balancer ID to OpenFlow rules in an OVN-Kubernetes environment like OpenShift, where load balancers are auto-generated for Kubernetes Services.
+This guide explains how to trace an OVN load balancer ID to OpenFlow rules in an OVN-Kubernetes environment, such as OpenShift, where load balancers are automatically generated for Kubernetes Services.
 
 ## Prerequisites
 
@@ -9,9 +9,9 @@ Access to the OpenShift \> 4.16 cluster with OVN-Kubernetes deployed (default CN
 Command-line tools: kubectl (or oc), ovn-nbctl, ovn-sbctl, ovs-ofctl.
 
 * ovn-nbctl and ovn-sbctl are found in one of the “ovnkube-node-xxxxx” pods in the openshift-ovn-kubernetes project  
-* ovs-ofctl is present on every OpenShift nodes
+* ovs-ofctl is present on every OpenShift node
 
-Create the “bookinfo” project
+Create the “bookinfo” project.
 
 ```c
 oc new-project bookinfo
